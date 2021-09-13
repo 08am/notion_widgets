@@ -102,7 +102,7 @@ td:nth-child(even)>span {
 }
 td:last-child>span,
 td:nth-child(6)>span {
-    color: #FBF3DB;
+    color: #DFAB01;
 }
 td.avui>span {
     font-weight: bold;
