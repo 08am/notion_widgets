@@ -115,20 +115,20 @@ td>en {
     transition: border 0.3s ease;
 }
 
-td:nth-child(even)>en {
+td:nth-child(even)>span {
     background-color: rgba(0,0,0,0.02);
 }
-td:last-child>en,
-td:nth-child(6)>en {
+td:last-child>span,
+td:nth-child(6)>span {
     color: #DFAB01;
 }
-td.avui>en {
+td.avui>span {
     font-weight: bold;
     background-color: #DFAB01;
     color: #fff;
     border: 2px solid rgba(0,0,0,0.1);
 }
-td.fora > en {
+td.fora > span {
     opacity: 0.2;
 }
 td > en:hover {
@@ -262,8 +262,8 @@ function calendari(widget, data)
     boto_next.innerHTML = '&#9656;';
 
     titol.appendChild(boto_prev);
-    titol.appendChild(document.createElement('en')).innerHTML = 
-        mesos[data.getMonth()] + '<en class="any">' + data.getFullYear() + '</en>';
+    titol.appendChild(document.createElement('span')).innerHTML = 
+        mesos[data.getMonth()] + '<span class="any">' + data.getFullYear() + '</span>';
 
     titol.appendChild(boto_next);
 
@@ -312,7 +312,7 @@ function calendari(widget, data)
 
 	    cela.appendChild(span);
 
-            en.innerHTML = actual.getDate();
+            span.innerHTML = actual.getDate();
 
             if(actual.getMonth() !== data.getMonth())
                 cela.className = 'fora';
